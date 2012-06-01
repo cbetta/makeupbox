@@ -2,9 +2,17 @@
   <div data-role="header">
     <a data-rel="back" data-icon="arrow-l" data-transition="slide" data-direction="reverse">Back</a>
     <h1>Lists</h1>
-    <a href="add.html"  data-icon="plus" data-transition="slide" data-direction="reverse">Back</a>
+    <a href="add.html"  data-icon="plus" data-transition="slide">Add</a>
   </div>
 
   <div data-role="content">
+    <ul data-role="listview" data-theme="c" data-bind="foreach: items">
+      <li>
+        <a href='show.html' data-bind="click: function(data, event) { $parent.setSelectedItem($index) }" data-transition="slide">
+          <img data-bind="attr: { src: $root.iconFor(category) }" class='ui-li-icon ui-li-thumb'>
+          <span data-bind="text: title"></span>
+        </a>
+      </li>
+    </ul>
   </div>
 </div>

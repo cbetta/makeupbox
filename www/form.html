@@ -1,0 +1,16 @@
+<div data-role="page" id="list">
+  <div data-role="header">
+    <a data-rel="back" data-icon="arrow-l" data-transition="slide" data-direction="reverse">Back</a>
+    <h1>Add <span data-bind="text: category"></span></h1>
+  </div>
+
+  <div data-role="content">
+    <form action="#" method="get" accept-charset="utf-8" data-bind="with: currentItem()">
+      <input name='title' data-bind="value: title" />
+      <textarea name='description'>
+      </textarea>
+    </form>
+
+  </div>
+</div>
+
