@@ -2,48 +2,43 @@
 <html>
   <head>
   <title></title>
-
-      <!-- Debug on http://debug.phonegap.com/client/foobar123 -->
-      <script src="http://debug.phonegap.com/target/target-script-min.js#foobar123 "></script>
-
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;" />
-	<meta charset="utf-8">
+	  <meta charset="utf-8">
 
-	<script type="text/javascript" charset="utf-8" src="scripts/cordova-1.7.0.js"></script>
+	  <script type="text/javascript" charset="utf-8" src="scripts/cordova-1.7.0.js"></script>
 
     <link rel="stylesheet" href="css/jquery.mobile-1.1.0.min.css" />
+    <link rel="stylesheet" href="css/app.css" />
 
     <script src="scripts/jquery-1.7.1.min.js"></script>
     <script src="scripts/jquery.mobile-1.1.0.min.js"></script>
-
-    <script>
-        function onSuccess(imageURI) {
-            alert(imageURI);
-        }
-
-        function onFail(message) {
-            alert('Failed because: ' + message);
-        }
-
-        function captureMyImage() {
-            navigator.camera.getPicture(onSuccess, onFail, { quality: 100, destinationType: Camera.DestinationType.FILE_URI, sourceType: Camera.PictureSourceType.SAVEDPHOTOALBUM });
-        }
-    </script>
+    <script src="scripts/app.js"></script>
   </head>
-  <body>
-      <h1>Hello World</h1>
-      <div data-role="page">
 
-          <div data-role="header">
-              <h1>My Title</h1>
+  <body>
+      <div data-role="page">
+          <div data-role="header" data-theme="a" class='header-homepage'>
+            <img src='images/blushr.png'>
           </div>
 
           <div data-role="content">
-              <a href='#' onclick="captureMyImage()" data-role="button" data-theme="a" data-icon="plus" data-iconpos="right">Add image</a>
-          </div><!-- /content -->
-
-
+              <a href='lists.html' data-transition="slide" class='tile'>
+                <img src='images/logo.png' /><br/>
+                My Makeup
+              </a>
+              <a href='add.html' data-transition="slide" class='tile'>
+                <img src='images/add.png' /><br/>
+                Add
+              </a>
+              <a href='looks.html' data-transition="slide" class='tile'>
+                <img src='images/looks.png' /><br/>
+                Looks
+              </a>
+              <a href='friends.html' data-transition="slide" class='tile'>
+                <img src='images/box.png' /><br/>
+                Friends
+              </a>
+          </div>
       </div>
 
 
