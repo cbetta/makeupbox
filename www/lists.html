@@ -1,18 +1,44 @@
-<div data-role="page" id="list">
-  <div data-role="header">
-    <a data-rel="back" data-icon="arrow-l" data-transition="slide" data-direction="reverse">Back</a>
-    <h1>Lists</h1>
-    <a href="add.html"  data-icon="plus" data-transition="slide">Add</a>
-  </div>
+<!DOCTYPE html>
+<html>
+  <head>
+  <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;" />
+	  <meta charset="utf-8">
 
-  <div data-role="content">
-    <ul data-role="listview" data-theme="c" data-bind="foreach: items">
-      <li>
-        <a href='show.html' data-bind="click: function(data, event) { $parent.setSelectedItem($index) }" data-transition="slide">
-          <img data-bind="attr: { src: $root.iconFor(category) }" class='ui-li-icon ui-li-thumb'>
-          <span data-bind="text: title"></span>
-        </a>
-      </li>
-    </ul>
-  </div>
-</div>
+	  <script type="text/javascript" charset="utf-8" src="scripts/cordova-1.7.0.js"></script>
+
+    <link rel="stylesheet" href="css/jquery.mobile-1.1.0.min.css" />
+    <link rel="stylesheet" href="css/app.css" />
+
+    <script src="scripts/knockout.js"></script>
+    <script src="scripts/jquery-1.7.1.min.js"></script>
+    <script src="scripts/jquery.mobile-1.1.0.min.js"></script>
+
+    <script src="scripts/app.js"></script>
+    <script src="scripts/all_brands.js"></script>
+    <script src="scripts/data.js"></script>
+
+  </head>
+
+  <body>
+    <div data-role="page" id="list">
+      <div data-role="header" data-position="fixed">
+        <a data-rel="back" data-icon="arrow-l" data-transition="slide" data-direction="reverse">Back</a>
+        <h1>Lists</h1>
+        <a href="add.html"  data-icon="plus" data-transition="slide">Add</a>
+      </div>
+
+      <div data-role="content">
+        <ul data-role="listview" data-theme="c" data-bind="foreach: items">
+          <li>
+            <a href='show.html' data-bind="click: function(data, event) { $parent.setSelectedItem($index) }" data-transition="slide">
+              <img data-bind="attr: { src: image }" class='ui-li-thumb'>
+              <h3 class="ui-li-heading" data-bind="text: title"></h3>
+              <p class="ui-li-desc" data-bind="text: brand + ', ' + color"></p>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
