@@ -1,47 +1,65 @@
 var appModel = {
   items: [
-    {
-    	brand: "Lancome",
-    	category: "eye liner",
-    	title: "Artliner",
-    	color: "01 Noir",
-    	image: ko.observable("images/products/lancome_artliner.png"),
-    	rating: 4
-    },
-    {
-    	brand: "Dior",
-    	category: "eye shadow",
-    	title: "5 Couleurs",
-    	color: "Tropical Light",
-    	image: ko.observable("images/products/dior_tropicallight.png"),
-    	rating: 4,
-    	review: "Lovely colours, but a bit too shiny for during the day. Perfect for a going-out look though!",
-    	notes: "Combine with Urban Decay gold eyeliner"
-    },
-    {
-    	brand: "Illamasqua",
-    	category: "eye shadow",
-    	title: "Liquid Metal",
-    	color: "Resolute",
-    	image: ko.observable("images/products/illamasqua_resolute.png"),
-    	rating: 2
-    },
-    {
-    	brand: "Urban Decay",
-    	category: "eye shadow",
-    	title: "Palette",
-    	color: "Naked",
-    	image: ko.observable("images/products/urbandecay_gash.png"),
-    	rating: 4
-    },
-    {
-    	brand: "MAC",
-    	category: "mascara",
-    	title: "Zoom",
-    	color: "Black",
-    	image: ko.observable("images/products/mac_zoom.png"),
-    	rating: 4
-    }
+  {
+  	brand: "Lancome",
+  	category: "eye liner",
+  	title: "Artliner",
+  	color: "01 Noir",
+  	image: ko.observable("images/products/lancome_artliner.png"),
+  	rating: 4,
+  	review: "Nice, but you need a steady hand to apply properly, otherwise it just ends up looking weird.",
+  	notes: ""
+  },
+  {
+  	brand: "Dior",
+  	category: "eye shadow",
+  	title: "5 Couleurs",
+  	color: "Tropical Light",
+  	image: ko.observable("images/products/dior_tropicallight.png"),
+  	rating: 4,
+  	review: "Lovely colours, but a bit too shiny for during the day. Perfect for a going-out look though!",
+  	notes: "Combine with Urban Decay gold eyeliner"
+  },
+  {
+  	brand: "Illamasqua",
+  	category: "eye shadow",
+  	title: "Liquid Metal",
+  	color: "Resolute",
+  	image: ko.observable("images/products/illamasqua_resolute.png"),
+  	rating: 2,
+  	review: "",
+  	notes: ""
+  },
+  {
+  	brand: "Urban Decay",
+  	category: "eye shadow",
+  	title: "Palette",
+  	color: "Naked",
+  	image: ko.observable("images/products/urbandecay_gash.png"),
+  	rating: 4,
+  	review: "",
+  	notes: ""
+  },
+  {
+  	brand: "MAC",
+  	category: "mascara",
+  	title: "Zoom",
+  	color: "Black",
+  	image: ko.observable("images/products/mac_zoom.png"),
+  	rating: 4,
+  	review: "",
+  	notes: ""
+  },
+  {
+  	brand: "Dior",
+  	category: "eye shadow",
+  	title: "Summer Palette",
+  	color: "Swimming Pool",
+  	image: ko.observable("images/products/dior_swimmingpool.png"),
+  	rating: 3,
+  	review: "",
+  	notes: ""
+  }
   ],
 
   friends: [
