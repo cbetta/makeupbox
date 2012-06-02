@@ -1,0 +1,25 @@
+<div data-role="page" id="list">
+  <div data-role="header" data-position="fixed">
+    <a data-rel="back" data-icon="arrow-l" data-transition="slide" data-direction="reverse">Save</a>
+    <h1>Add <span data-bind="text: selectedCategory"></span></h1>
+  </div>
+
+  <div data-role="content">
+    <form action="#" method="get" accept-charset="utf-8" data-bind="with: currentItem()" class='item'>
+      <div class='description'>
+        <img data-bind="attr: { src: image }, click: captureItemImage">
+        <input data-bind="value: title" placeholder="title" />
+        <select data-bind="options: all_brands, value: brand"></select>
+      </div>
+      <h3>Color</h3>
+      <input data-bind="value: color" type='text' placeholder='Color'></textarea>
+      <h3>Review</h3>
+      <textarea data-bind="value: review" placeholder='Review'></textarea>
+      <br/>
+      <select data-bind="options: $parent.valid_ratings, value: rating"></select>
+      <h3>Notes</h3>
+      <textarea data-bind="value: notes" placeholder='Notes'></textarea>
+    </form>
+  </div>
+</div>
+

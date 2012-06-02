@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;" />
+	  <meta charset="utf-8">
+
+	  <script type="text/javascript" charset="utf-8" src="scripts/cordova-1.7.0.js"></script>
+
+    <link rel="stylesheet" href="css/jquery.mobile-1.1.0.min.css" />
+    <link rel="stylesheet" href="css/app.css" />
+
+    <script src="scripts/knockout.js"></script>
+    <script src="scripts/jquery-1.7.1.min.js"></script>
+    <script src="scripts/jquery.mobile-1.1.0.min.js"></script>
+
+    <script src="scripts/app.js"></script>
+    <script src="scripts/all_brands.js"></script>
+    <script src="scripts/data.js"></script>
+
+  </head>
+
+  <body>
+    <div data-role="page" id="list" data-bind="with: currentItem()">
+      <div data-role="header">
+        <a data-rel="back" data-icon="arrow-l" data-transition="slide" data-direction="reverse">Back</a>
+        <h1 data-bind='text: title'></h1>
+        <a href='form.html' data-icon="gear" data-transition="slide">Edit</a>
+      </div>
+
+      <div data-role="content" class='item'>
+        <div class='description'>
+          <img data-bind="attr: { src: image }" />
+          <h2 data-bind='text: title'></h2>
+          <h3 data-bind='text: brand'></h3>
+          <h4 data-bind='text: color'></h4>
+          <img data-bind='attr: { src: $root.imageFor(rating) }'/>
+        </div>
+
+        <!-- ko if: review -->
+        <h3>Review</h3>
+        <p data-bind="text: review"></p>
+        <!-- /ko -->
+
+        <!-- ko if: notes -->
+        <h3>Notes</h3>
+        <p data-bind="text: notes"></p>
+        <!-- /ko -->
+
+        <div data-role="controlgroup" data-type="horizontal">
+          <a href="#" data-role="button" data-icon="info" data-theme="b">Buy now</a>
+          <a href="#" data-role="button" data-icon="plus">Wishlist</a>
+        </div>
+
+        <h3>Similar items</h3>
+
+        <div data-bind="foreach: $parent.items">
+          <a href='show.html' data-bind="click: function(data, event) { $parent.setSelectedItem($index) }" data-transition="slide">
+            <img data-bind="attr: { src: image }">
+          </a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

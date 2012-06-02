@@ -10,14 +10,18 @@
     <link rel="stylesheet" href="css/jquery.mobile-1.1.0.min.css" />
     <link rel="stylesheet" href="css/app.css" />
 
+    <script src="scripts/knockout.js"></script>
     <script src="scripts/jquery-1.7.1.min.js"></script>
     <script src="scripts/jquery.mobile-1.1.0.min.js"></script>
+
     <script src="scripts/app.js"></script>
+    <script src="scripts/all_brands.js"></script>
+    <script src="scripts/data.js"></script>
   </head>
 
   <body>
       <div data-role="page">
-          <div data-role="header" data-theme="a" class='header-homepage'>
+          <div data-role="header" data-theme="a" class='header-homepage' data-position="fixed">
             <img src='images/blushr.png'>
           </div>
 
@@ -26,7 +30,7 @@
                 <img src='images/logo.png' /><br/>
                 My Makeup
               </a>
-              <a href='add.html' data-transition="slide" class='tile'>
+              <a href='add.html' data-transition="slide" class='tile' data-bind='click: clearSelectedItem'>
                 <img src='images/add.png' /><br/>
                 Add
               </a>
