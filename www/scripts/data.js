@@ -103,12 +103,18 @@ var appModel = {
   selectedItem: null,
   selectedFriend: null,
 
+  valid_ratings: [0,1,2,3,4,5],
+
   setSelectedCategory: function(cat) {
     this.selectedCategory = cat;
   },
 
   setSelectedItem: function(index) {
     this.selectedItem = index();
+  },
+
+  clearSelectedItem: function() {
+    this.selectedItem = null;
   },
 
   setSelectedFriend: function(index) {
@@ -125,7 +131,7 @@ var appModel = {
 
   currentItem: function() {
     if (this.selectedItem == null) {
-      this.items.push ({ title: null, category: null, image: ko.observable("images/no-image.png"), color: null, brand: null, rating: 3 });
+      this.items.push ({ title: null, category: null, image: ko.observable("images/no-image.png"), color: null, brand: null, rating: 3, notes: null, review: null });
       this.selectedItem = this.items.length-1;
     }
     return this.items[this.selectedItem];

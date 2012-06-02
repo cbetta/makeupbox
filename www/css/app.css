@@ -60,11 +60,11 @@ a.tile img {
   line-height: 26px;
 }
 
-/*.item .description input {
+.item .description input {
   width: 180px;
   margin-bottom: 10px;
 }
-*/
+
 .item .description h3 {
   line-height: 22px;
   padding: 0px;
