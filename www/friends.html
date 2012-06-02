@@ -2,8 +2,18 @@
   <div data-role="header">
     <a data-rel="back" data-icon="arrow-l" data-transition="slide" data-direction="reverse">Back</a>
     <h1>Friends</h1>
+    <a href='#' data-icon="plus" data-transition="slide">Add</a>
   </div>
 
   <div data-role="content">
+    <ul data-role="listview" data-theme="c" data-bind="foreach: friends">
+      <li>
+        <a href='lists.html' data-bind="click: function(data, event) { $parent.setSelectedFriend($index) }" data-transition="slide">
+          <img data-bind="attr: { src: image }" class='ui-li-thumb'>
+          <h3 class="ui-li-heading" data-bind="text: name"></h3>
+          <p class="ui-li-desc">15 items, 3 looks</p>
+        </a>
+      </li>
+    </ul>
   </div>
 </div>
